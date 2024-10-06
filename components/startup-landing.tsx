@@ -7,14 +7,12 @@ import * as THREE from 'three'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ChevronRight, Code, Cpu, Users, Mail, Phone, MapPin, Calendar as CalendarIcon, PlayCircle } from "lucide-react"
 import Image from 'next/image'
 import { TypewriterEffect } from '@/components/TypewriterEffect'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { Calendar } from "@/components/ui/calendar"
-import { format } from "date-fns"
 
 function GeometricArtifact() {
   const meshRef = useRef<THREE.Mesh>(null!)
@@ -212,7 +210,7 @@ export function StartupLandingComponent() {
               At Aiberge, we blend the power of AI with bold creativity to tackle complex challenges and redefine innovation. Our passionate team of tech visionaries is dedicated to developing cutting-edge AI solutions that reshape industries and accelerate business evolution.
               </p>
               <p className="text-xl">
-              We believe in user-first design combined with advanced, seamless technology. Our mission is to deliver software that doesn’t just meet expectations but exceeds them—pushing boundaries and empowering our clients to stay ahead in the fast-changing digital landscape.
+              We believe in user-first design combined with advanced, seamless technology. Our mission is to deliver software that doesn&apos;t just meet expectations but exceeds them—pushing boundaries and empowering our clients to stay ahead in the fast-changing digital landscape.
               </p>
             </div>
           </section>
@@ -333,7 +331,7 @@ export function StartupLandingComponent() {
                           type="email"
                           placeholder="Your email"
                           value={email}
-                          onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                           required
                           className="text-black placeholder:text-gray-500"
                         />
@@ -368,15 +366,7 @@ export function StartupLandingComponent() {
                               <Input id="companyName" placeholder="Your company name" required />
                             </div>
                           )}
-                          <div>
-                            <Label>Select Date</Label>
-                            <Calendar
-                              mode="single"
-                              selected={date}
-                              onSelect={setDate}
-                              className="rounded-md border"
-                            />
-                          </div>
+                          
                         </>
                       )}
                       <div>
