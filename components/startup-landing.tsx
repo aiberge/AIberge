@@ -2,7 +2,7 @@
 
 import { useState, useRef, useMemo, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Stars, Line } from '@react-three/drei'
+import { OrbitControls, Stars,  } from '@react-three/drei'
 import * as THREE from 'three'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -210,7 +210,7 @@ export function StartupLandingComponent() {
               At Aiberge, we blend the power of AI with bold creativity to tackle complex challenges and redefine innovation. Our passionate team of tech visionaries is dedicated to developing cutting-edge AI solutions that reshape industries and accelerate business evolution.
               </p>
               <p className="text-xl">
-              We believe in user-first design combined with advanced, seamless technology. Our mission is to deliver software that doesn&apos;t just meet expectations but exceeds them—pushing boundaries and empowering our clients to stay ahead in the fast-changing digital landscape.
+              We believe in user-first design combined with advanced, seamless technology. Our mission is to deliver software that do not just meet expectations but exceeds them—pushing boundaries and empowering our clients to stay ahead in the fast-changing digital landscape.
               </p>
             </div>
           </section>
